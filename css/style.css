@@ -85,9 +85,6 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap-reverse;
-  background-image: url("../assets//Images/Group-14.png");
-  background-size: 60%;
-  background-repeat: no-repeat;
 }
 .banner-image {
   padding: 20px;
@@ -99,6 +96,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
+  background-image: url("../assets//Images/Group-14.png");
+  background-size: contain;
   width: calc(50% - 5px);
 }
 .banner-text .title {
