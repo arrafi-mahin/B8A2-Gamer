@@ -315,7 +315,7 @@ nav {
 /* Footer */
 footer {
   background-color: var(--dark);
-  padding: 20vh 0;
+  /* padding: 20vh 0; */
 }
 .footer {
   display: flex;
