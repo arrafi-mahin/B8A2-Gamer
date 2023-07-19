@@ -214,10 +214,13 @@ nav {
 }
 .card {
   max-width: 280px;
-  border-radius: 16px;
-  height: auto;
+}
+.card-body {
   position: relative;
   overflow: hidden;
+  border-radius: 16px;
+  height: auto;
+  width: 100%;
 }
 .card-img {
   width: 100%;
@@ -244,7 +247,119 @@ nav {
   font-size: 20px;
   font-weight: 700;
 }
-/*  */
+.card-text {
+  color: #534c64;
+  font-size: 17px;
+  font-weight: 500;
+}
+/* service */
+#service {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8vw;
+}
+.service-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 350px;
+}
+.service-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.img-1 {
+  width: 80%;
+  /* height: auto; */
+  /* position: absolute; */
+}
+.img-2 {
+  width: 30%;
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+#category {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#category button {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100px;
+}
+#category button:hover {
+  color: var(--primary);
+  border: 1px solid #ff42a5;
+}
+#category img {
+  border-radius: 100px;
+  height: 60px;
+  width: 60px;
+}
+#category span {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Footer */
+footer {
+  background-color: var(--dark);
+  padding: 20vh 0;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 42px 0;
+}
+footer .name {
+  color: var(--white);
+}
+footer .logo {
+  justify-content: center;
+}
+.footer .nav-items {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.footer .nav-item {
+  color: var(--white);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.social {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.social-icon {
+  text-decoration: none !important;
+}
+.terms {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
 /* Breakpoints */
 /* Mobile */
 @media (max-width: 576px) {
@@ -299,6 +414,10 @@ nav {
   }
   .about-bottom p {
     font-size: 20px;
+  }
+  .service-text {
+    align-items: center;
+    text-align: center;
   }
 }
 
