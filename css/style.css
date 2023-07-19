@@ -1,6 +1,6 @@
 :root {
   --primary: #ff42a5;
-  --secondary: #ffffff;
+  --secondary: #4ec5f7;
   --dark: #0b0223;
   --white: #ffffff;
   --gradient: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
@@ -13,11 +13,34 @@ body {
 }
 section {
   max-width: 1200px;
-  padding: 0 20px;
+  margin: 0 42px;
   margin: auto;
 }
 .important {
   color: var(--primary);
+}
+.btn {
+  padding: 20px 40px;
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: fit-content;
+  border: none;
+}
+.btn-primary {
+  background-color: var(--primary);
+}
+.btn-secondary {
+  background-color: var(--secondary);
+}
+.btn:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.btn:active {
+  transform: scale(0.98);
 }
 /* NavBbar */
 header {
@@ -124,9 +147,64 @@ nav {
   font-weight: 500;
   text-transform: lowercase;
 }
+/* About */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  text-align: right;
+  justify-content: center;
+  /* grid-template-columns: repeat(2, 20px 1fr); */
+}
+#about img {
+  width: 48%;
+  height: auto;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.about-title {
+  font-size: 48px;
+  font-weight: 700;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-desc {
+  color: var(--dark);
+
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 520px;
+}
+.about-bottom {
+  color: #534c64;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+.about-bottom p {
+  margin: 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
 /* Breakpoints */
 /* Mobile */
 @media (max-width: 576px) {
+  section {
+    padding: 0 20px;
+  }
+  .btn {
+    font-size: 12px;
+  }
   nav {
     justify-content: center;
   }
@@ -141,6 +219,7 @@ nav {
   .banner-text {
     margin: 0 auto;
     width: 100%;
+    padding: 20px;
   }
   .banner-text .title {
     font-size: 30px;
@@ -156,7 +235,21 @@ nav {
   .banner-image {
     max-width: 300px;
   }
+  #about img {
+    width: 100%;
+  }
+  .about-text {
+    align-items: center;
+    text-align: center !important;
+  }
+  .about-title {
+    font-size: 40px;
+  }
+  .about-bottom p {
+    font-size: 20px;
+  }
 }
+
 /* Tablet */
 @media (min-width: 768px) {
 }
